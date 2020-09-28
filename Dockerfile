@@ -1,6 +1,8 @@
-FROM node:8.11.2
-WORKDIR /app
-CMD pwd
-COPY . .
-EXPOSE 8081
-ENTRYPOINT [ "node","service.js" ]
+FROM ubuntu:18.04
+MAINTAINER John Chen <cjokok823@gmail.com>
+
+RUN apt-get update && \
+apt-get upgrade -y && \
+apt-get install shadowsocks-libev -y
+#Configure container to run as an executable
+ENTRYPOINT 
