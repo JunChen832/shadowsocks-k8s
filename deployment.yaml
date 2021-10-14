@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-node
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kube-node
+ 
+  template:
+    metadata:
+      labels:
+        app: kube-node
+    spec:
+ 
+      containers:
+ 
+        - name: kube-node-demo-instance
+ 
+          image: wucong60/kube-node-demo1:v1
+ 
+          ports:
+ 
+            - containerPort: 8081
