@@ -5,4 +5,4 @@ RUN apt-get update && \
 apt-get upgrade -y && \
 apt-get install shadowsocks-libev -y
 #Configure container to run as an executable
-ENTRYPOINT 
+ENTRYPOINT [ "bash" ]
