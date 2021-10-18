@@ -8,5 +8,5 @@ docker build -t johnchen823/shadowsocks .
 Push image to docker hub
 
 Run in minikube:
-sudo kubectl deployment -f deployment.yaml
-
+sudo kubectl create -f deployment.yaml
+sudo kubectl create -f service.yaml
